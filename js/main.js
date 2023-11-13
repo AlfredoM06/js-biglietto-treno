@@ -12,7 +12,17 @@ km = parseInt(km);
 
 // calcolare prezzo base biglietto seguendo regole fornite 
 let ticketPrice = km * 0.21; 
+let ticketPriceforMinors = ticketPrice * 20 / 100;
+let ticketPriceforElders = ticketPrice * 40 / 100;
 
 // calcolare sconti in base all'età
+if (age < 18) {
+    ticketPrice = ticketPrice - ticketPriceforMinors;
+} else if (age > 65) {
+    ticketPrice = ticketPrice - ticketPriceforElders;
+}
 
+//Impostare massimo 2 decimali per il risultato del prezzo
+let finalPrice = ticketPrice.toFixed(2);
 
+console.log(finalPrice)
