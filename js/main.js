@@ -25,4 +25,4 @@ if (age < 18) {
 //Impostare massimo 2 decimali per il risultato del prezzo
 let finalPrice = ticketPrice.toFixed(2);
 
-console.log(finalPrice)
+document.getElementById("ticket_price").innerHTML = finalPrice;
